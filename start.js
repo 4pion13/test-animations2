@@ -11,6 +11,7 @@ let tg = window.Telegram.WebApp;
 try {
     document.getElementById("name").textContent = tg.initDataUnsafe.user.username;
     tg.expand();
+    tg.disableVerticalSwipes();
 } catch (err) {
     document.location.href = "https://t.me/test_task_13_bot/forkflow";
 }
