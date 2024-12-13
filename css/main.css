@@ -12,7 +12,7 @@ a {
 }
 
 .test-block {
-    position: absolute;
+    position: fixed;
     padding: 10% 5%;
     background-color: black;
     width: 100%;
@@ -61,7 +61,7 @@ a {
 
 
 .note-block {
-    position: absolute;
+    position: fixed;
     padding: 10% 5%;
     background-color: black;
     width: 100%;
