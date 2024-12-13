@@ -6,6 +6,8 @@ const startText = document.getElementById('start-text');
 const noteBtn = document.getElementById('note-btn');
 const noteBlock = document.getElementById('note-block');
 const closeNote = document.getElementById('close-note');
+let tg = window.Telegram.WebApp;
+document.getElementById("name").textContent = tg.initDataUnsafe.user.username;
 console.log(noteBlock.innerHTML);
 console.log(testBlock.innerHTML)
 addButton.onclick = function() {
