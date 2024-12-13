@@ -16,10 +16,9 @@ try {
     document.location.href = "https://t.me/test_task_13_bot/forkflow";
 }
 
-console.log(noteBlock.innerHTML);
-console.log(testBlock.innerHTML)
 addButton.onclick = function() {
     workFlow.classList.add("test-block-resized");
+
 }
 
 closeBtn.onclick = function() {

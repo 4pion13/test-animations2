@@ -46,15 +46,21 @@
                             <i class="fa-solid fa-square-xmark fa-2xl" style="color: #ffffff;"></i>
                         </button>
                     </nav>
-                    <label style="color: #ffffff;">Название</label>
-                    <input style="border: 2px solid #ffffff; color: #ffffff; width: 100%; margin: 5px 0px 20px 0px;">
-                    <textarea style="border: 2px solid #ffffff; color: #ffffff; width: 100%; margin-bottom: 20px;"></textarea>
-                    <form style="border: 2px solid #ffffff; color: #ffffff; width: 100%; margin-bottom: 20px;"> 
-                        <input type="date" name="calendar" value="2012-06-01"
-                        max="2012-06-04" min="2012-05-29">
-                    </form>
-                    <div id="datepicker" style="width: 100%;"></div>
-                    <input type="hidden" id="datepicker_value" value="">
+                    <div>
+                        <label style="color: #ffffff;">Название</label>
+                        <input style="border: 2px solid #ffffff; color: #ffffff; width: 100%;">
+                    </div>
+                    <div>
+                        <label style="color: #ffffff;">Описание</label>
+                        <textarea style="border: 2px solid #ffffff; color: #ffffff; resize: none;min-height: 100px; max-height: 100%;
+                        overflow-x: hidden;
+                        overflow-y: auto;; width: 100%;"></textarea>
+                    </div>
+                    <div>
+                        <p id="date-show" style="color: #ffffff;">-</p>
+                        <div id="datepicker" style="width: 100%;"></div>
+                        <input type="hidden" id="datepicker_value" value="">
+                    </div>
                 </div>
             </div>
         </main>
@@ -117,16 +123,23 @@
             $("#datepicker").datepicker({
                 onSelect: function(date){
                     $('#datepicker_value').val(date)
+                    document.getElementById('date-show').textContent = "Выбранная дата: " + document.getElementById('datepicker_value').value;
                 }
+                
             });
-            $("#datepicker").datepicker("setDate", $('#datepicker_value').val());
-        });
-        $(function(){
 
-        $("#datepicker").datepicker({
-            minDate: 0
+            $("#datepicker").datepicker("setDate", $('#datepicker_value').val());
+            $(function(){
+                $("#datepicker").datepicker({
+                    minDate: 0
+                })
+            });
         });
-        });
+        // $(function(){
+        //     $("#datepicker").datepicker({
+        //         minDate: 0
+        //     })
+        // });
     </script>
 </body>
 </html>
