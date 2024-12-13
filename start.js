@@ -1,3 +1,4 @@
+screen.orientation.lock('landscape');
 const addButton = document.getElementById('add');
 const workFlow = document.getElementById('work-flow');
 const testBlock = document.getElementById('work-flow');

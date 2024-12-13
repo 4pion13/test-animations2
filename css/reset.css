@@ -87,3 +87,6 @@ label {
 legend {
 	display: block;
 }
+
+
+body {  max-width:600px; }
