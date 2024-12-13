@@ -11,7 +11,7 @@
     height: 100%;
     left: -100%;
     z-index: 1;
-    transition: left 0.9s 0.5s;
+    transition: left 0.5s 0.2s;
     box-sizing: border-box;
 }
 
@@ -60,7 +60,7 @@
     height: 100%;
     left: -100%;
     z-index: 1;
-    transition: left 0.9s 0.5s;
+    transition: left 0.5s 0.2s;
     box-sizing: border-box;
     z-index: 1;
 }
